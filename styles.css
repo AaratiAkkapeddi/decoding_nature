@@ -1,0 +1,118 @@
+:root {
+    --bg: rgb(225, 238, 225);
+    --bg-hover: lightgreen;
+    --fg: rgb(0, 0, 0);
+    --font-size: 1.2vw;
+    --font-size-l: 1.5vw;
+
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--fg);
+}
+#project-info{
+    background-color: var(--bg);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 20%;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-size: var(--font-size);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 40px;
+}
+
+#class-descrip{
+    display: flex;
+    gap: 2vw;
+    max-width: 50%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#class-descrip p{
+    margin-top:0;
+}
+h1,h2 {
+    font-size: var(--font-size-l);
+    font-weight: normal;
+    margin-top: 0;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+ul li {
+    display: inline-block;
+    width: calc(20% - 40px);
+    list-style: none;
+}
+
+ul a {
+    mix-blend-mode: multiply;
+}
+
+ul img {
+    width: 100%;
+}
+
+ul a:hover {
+    mix-blend-mode: normal;
+    font-style: italic;
+}
+
+#back-to-home, #next-project {
+    text-decoration: underline;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: Arial;
+    font-size: var(--font-size);
+    text-transform: lowercase;
+}
+#next-project {
+    float: right;
+}
+
+
+@media (max-width: 768px) {
+    :root {
+        --bg: rgb(225, 238, 225);
+        --bg-hover: lightgreen;
+        --fg: rgb(0, 0, 0);
+        --font-size: 3vw;
+        --font-size-l: 3.5vw;
+    }
+    h2 {
+        font-size: var(--font-size-l);
+        font-weight: normal;
+        margin-top: 0;
+    }
+    p {
+        max-width: 100%;
+    }
+    ul li {
+        width: calc(50% - 40px);
+    }
+    #class-descrip{
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+}
