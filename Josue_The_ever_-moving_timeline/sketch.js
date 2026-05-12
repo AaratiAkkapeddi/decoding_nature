@@ -31,6 +31,6 @@ function draw() {
   for(let i = 0; i < 100; i++){
     // Dark gray gradient with transparency
     fill(20 + (i * 15), 150); 
-    ellipse(i * 50, 200, 50, 50);
+    ellipse(i * 50, height/2, 50, 50);
   }
 }
