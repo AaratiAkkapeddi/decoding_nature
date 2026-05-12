@@ -61,7 +61,7 @@ ul {
 
 ul li {
     display: inline-block;
-    width: calc(20% - 40px);
+    width: calc(10% - 20px);
     list-style: none;
 }
 
@@ -108,7 +108,7 @@ ul a:hover {
         max-width: 100%;
     }
     ul li {
-        width: calc(50% - 40px);
+        width: calc(33% - 40px);
     }
     #class-descrip{
         flex-direction: column;
