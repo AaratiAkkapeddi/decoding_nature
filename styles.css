@@ -114,5 +114,16 @@ ul a:hover {
         flex-direction: column;
         max-width: 100%;
     }
+    #project-info{
+        width: calc(100% - 30px);
+        /* bottom:0;
+        top: auto; */
+        padding: 15px;
+    }
+    canvas{
+        height: 75vh !important;
+        bottom: 0;
+        position: fixed;
+    }
 
 }
