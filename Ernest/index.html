@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>(READ)ing the City — NYC Literacy Subway Map</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+     <div id="project-info">
+      <h1>Reading the City</h1>
+      <em>By Ernest</em>
+      <p></p>
+
+      <a id="prev-project" href="../Ernest_Rubik/">previous project</a>
+      <a id="next-project" href="../Rebecca/">next project</a><br><br>
+      <a id="back-to-home" href="../index.html">Back to Home</a>
+    </div>
+    <header class="hero-header">
+      <div class="read-seal" aria-label="READ logo">
+        <img src="READ_logo.png" alt="READ transit-style logo" />
+      </div>
+
+      <div class="title-block">
+        <p class="kicker">
+          A (DE)CODING NATURE + INTRO TO STATS CROSSOVER PRODUCTION
+        </p>
+        <h1>Reading the City:</h1>
+        <p class="hero-subtitle">
+          Understanding Disparities in Literacy Amongst each MTA Train Line
+        </p>
+      </div>
+
+      <div class="essay-credit">
+        <strong>A Data Essay by Ernest Estimé.</strong>
+        <span>Bard | Spring ’26.</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="main-column">
+        <section class="map-panel">
+          <div class="panel-top">
+            <div class="panel-title">
+              <h2>System Map</h2>
+              <p>NYC reading system / subway-inspired literacy data map</p>
+            </div>
+
+            <div class="legend" aria-label="Route key">
+              <span class="pill red">1</span>
+              <span class="pill red">2</span>
+              <span class="pill red">3</span>
+
+              <span class="pill green">4</span>
+              <span class="pill green">5</span>
+              <span class="pill green">6</span>
+
+              <span class="pill purple">7</span>
+
+              <span class="pill blue">A</span>
+              <span class="pill blue">C</span>
+              <span class="pill blue">E</span>
+
+              <span class="pill orange">B</span>
+              <span class="pill orange">D</span>
+              <span class="pill orange">F</span>
+              <span class="pill orange">M</span>
+
+              <span class="pill lime">G</span>
+
+              <span class="pill brown">J</span>
+              <span class="pill brown">Z</span>
+
+              <span class="pill yellow">N</span>
+              <span class="pill yellow">Q</span>
+              <span class="pill yellow">R</span>
+              <span class="pill yellow">W</span>
+
+              <span class="pill gray">L</span>
+              <span class="pill sir">SIR</span>
+            </div>
+          </div>
+
+          <div id="map-canvas"></div>
+        </section>
+
+        <section class="explainer-grid">
+          <article class="explain-card">
+            <h3>WHAT YOU ARE LOOKING AT</h3>
+            <p>
+              Each subway station is paired with a New York City Community
+              School District. The map turns every route into a reading-data
+              corridor, showing literacy proficiency, district context, income,
+              English learner share, and whether the data is verified or
+              estimated.
+            </p>
+          </article>
+
+          <article class="explain-card">
+            <h3>HOW TO READ IT</h3>
+            <p>
+              Hover to preview a station. Click to lock its data into the right
+              panel. Click again to release it. Animated flows suggest movement,
+              student circulation, and civic urgency across the citywide system.
+            </p>
+          </article>
+        </section>
+
+        <section class="insight-grid">
+          <div class="insight-label">
+            <span>NOTES</span>
+            <span>+</span>
+            <span>INSIGHTS</span>
+          </div>
+
+          <article class="insight-card">
+            <div class="insight-icon">▮▮▮</div>
+            <h4>Literacy Varies Across Boroughs</h4>
+            <p>
+              Rate gaps widen as routes move farther from central hubs and
+              high-proficiency districts.
+            </p>
+          </article>
+
+          <article class="insight-card active">
+            <div class="insight-icon">●●●</div>
+            <h4>Transfers Create Opportunity</h4>
+            <p>
+              Major interchange stations become natural zones for outreach,
+              intervention, and citywide literacy support.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-icon">▭</div>
+            <h4>Data Informs Action</h4>
+            <p>
+              Verified rates, income, and English learner share expose where
+              support is most urgent.
+            </p>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-icon">◉</div>
+            <h4>Stronger System, Stronger Students</h4>
+            <p>
+              A citywide literacy system should move resources as deliberately
+              as trains move riders.
+            </p>
+          </article>
+        </section>
+      </section>
+
+      <aside class="data-panel">
+        <div class="data-panel-inner">
+          <p class="side-kicker">LIVE STATION PROFILE</p>
+          <h3 id="stationName">72 St / Upper West Side</h3>
+          <p id="stationMeta">
+            Manhattan · District 3 · Major local/express corridor
+          </p>
+
+          <div id="routeBadges" class="route-badges"></div>
+
+          <div class="stat-grid">
+            <div class="stat-card primary">
+              <span class="stat-label">Reading Rate</span>
+              <strong id="readingRate">72%</strong>
+              <span id="readingSignal">Signal: Strong</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Median Income</span>
+              <strong id="medianIncome">$91,751</strong>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">English Learners</span>
+              <strong id="englishLearners">8.2%</strong>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Citywide Gap</span>
+              <strong id="cityGap">+11 pts</strong>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Support Need</span>
+              <strong id="supportNeed">Moderate</strong>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Data Status</span>
+              <strong id="dataStatus">Estimated</strong>
+            </div>
+          </div>
+
+          <div class="context-box">
+            <h4>District + Station Context</h4>
+            <p id="stationContext">
+              Higher-performing Manhattan trunk stop with strong household
+              income and lower English learner share. Useful as a contrast point
+              against lower-performing corridors elsewhere in the city.
+            </p>
+          </div>
+
+          <div class="context-box">
+            <h4>Interaction Tip</h4>
+            <p>
+              Hover = preview. Click = lock. Hover halos, tooltips, and slowed
+              flow markers make the system feel more alive while staying
+              legible.
+            </p>
+          </div>
+
+          <div class="signal-key">
+            <h4>Literacy Signal Key</h4>
+            <ul>
+              <li><span class="signal-dot high"></span> 80%+ — Very High</li>
+              <li><span class="signal-dot good"></span> 65–79% — High</li>
+              <li><span class="signal-dot mid"></span> 50–64% — Mid</li>
+              <li><span class="signal-dot low"></span> 40–49% — Low</li>
+              <li>
+                <span class="signal-dot urgent"></span> Below 40% — Very Low
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <a id="code-link" href="https://editor.p5js.org/ee8810/sketches/OAFk791oa" target="_blank">see code</a>
+    <script src="data.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
