@@ -64,7 +64,17 @@ ul li {
     width: calc(10% - 20px);
     list-style: none;
 }
-
+#code-link{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--bg);
+    color: var(--fg);
+    padding: 5px 10px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: var(--font-size);
+}
 ul a {
     mix-blend-mode: multiply;
 }
@@ -124,6 +134,9 @@ ul a:hover {
         height: 75vh !important;
         bottom: 0;
         position: fixed;
+    }
+    #code-link{
+        display: none;
     }
 
 }
