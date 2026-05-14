@@ -29,7 +29,7 @@ createCanvas(windowWidth, windowHeight * 0.65);
   }else{
 createCanvas(windowWidth, windowHeight);
   }  angleMode(DEGREES); // switch to degrees form radians
-  frameRate(7.5);
+  frameRate(5);
   
    for (let i = 0; i < 2; i = i + 1) {
     
@@ -87,6 +87,7 @@ function branch(len, w) {
     
     }
   }
+  
     image(walkImg, 200, 150, 100);
   
 }
