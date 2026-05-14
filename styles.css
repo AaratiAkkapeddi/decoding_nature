@@ -120,7 +120,7 @@ ul a:hover {
         max-width: 100%;
     }
     ul li {
-        width: calc(33% - 40px);
+        width: calc(50% - 20px);
     }
     #class-descrip{
         flex-direction: column;
@@ -141,6 +141,9 @@ ul a:hover {
     }
     #code-link{
         display: none;
+    }
+    ul {
+        gap: 10px;
     }
 
 }
