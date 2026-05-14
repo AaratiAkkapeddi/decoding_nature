@@ -64,7 +64,7 @@ function draw() {
 
   // Tree
 
-   if(window.innerWidth < 768){
+ if(width < 768){
   drawBranch(width/2, height * 0.85, -PI / 2, 100);
   }else{
   drawBranch(width/2, height * 0.7, -PI / 2, 100);
