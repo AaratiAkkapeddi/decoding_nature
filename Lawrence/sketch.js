@@ -63,8 +63,12 @@ function draw() {
   ellipse(600 + cloudOffset, 20, 180, 95);
 
   // Tree
-  drawBranch(width/2, height * 0.7, -PI / 2, 100);
 
+   if(window.innerWidth < 768){
+  drawBranch(width/2, height * 0.85, -PI / 2, 100);
+  }else{
+  drawBranch(width/2, height * 0.7, -PI / 2, 100);
+  }
   //  Birds
   for (let bird of flock) {
     bird.flock(flock);

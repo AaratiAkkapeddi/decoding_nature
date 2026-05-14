@@ -97,8 +97,12 @@ function draw() {
   if(season == 4){
     season = 0;
   }
+ if(window.innerWidth < 768){
+ branch(90, 20);
+  }else{
+ branch(120, 20);
+  }
 
-  branch(120, 20);
 }
 
 function branch(len, w) {

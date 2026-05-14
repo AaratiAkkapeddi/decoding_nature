@@ -69,13 +69,22 @@ function draw() {
       this.ys=this.ys*800;
       
     }
+      if(window.innerWidth <768){
+ if(this.xs<0){
+      image(birdImg,this.x,this.y, 200, 200);
+    }else{
+      image(birdLeftImg,this.x,this.y, 200, 200);
       
-    if(this.xs<0){
+    }
+      }else{
+ if(this.xs<0){
       image(birdImg,this.x,this.y);
     }else{
       image(birdLeftImg,this.x,this.y);
       
     }
+      }
+   
       
     }
     

@@ -24,13 +24,24 @@ function draw() {
   push();
   stroke(68, 46, 9);
 
+   if(window.innerWidth < 768){
+  branch(height * 0.10);
+  }else{
   branch(height * 0.12);
+  }
+
 
   pop();
 
   push();
   stroke(68, 46, 9);
+    if(window.innerWidth < 768){
   rootSystem(height * 0.07);
+  }else{
+  rootSystem(height * 0.07);
+  }
+
+
   pop();
 
   noStroke();
