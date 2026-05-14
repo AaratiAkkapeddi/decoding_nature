@@ -14,6 +14,10 @@ a:hover,
 a:active {
     color: var(--fg);
 }
+#project-info em{
+    display: block;
+    margin-bottom: 5px;
+}
 #project-info{
     background-color: var(--bg);
     padding: 20px;
@@ -108,8 +112,8 @@ ul a:hover {
         --bg: rgb(225, 238, 225);
         --bg-hover: lightgreen;
         --fg: rgb(0, 0, 0);
-        --font-size: 3vw;
-        --font-size-l: 3.5vw;
+        --font-size: 3.5vw;
+        --font-size-l: 3.75vw;
     }
     h2 {
         font-size: var(--font-size-l);
@@ -120,7 +124,7 @@ ul a:hover {
         max-width: 100%;
     }
     ul li {
-        width: calc(50% - 20px);
+        width: calc(50% - 10px);
     }
     #class-descrip{
         flex-direction: column;
@@ -130,9 +134,15 @@ ul a:hover {
         width: calc(100% - 30px);
         /* bottom:0;
         top: auto; */
-        max-height: 20vh;
+        max-height: auto;
         overflow-y: scroll;
         padding: 15px;
+    }
+    #project-info p{
+        max-height: 100px;
+        padding: 5px;
+        overflow-y: scroll;
+        border:1px solid black;
     }
     canvas{
         height: 75vh !important;
