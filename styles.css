@@ -112,8 +112,8 @@ ul a:hover {
         --bg: rgb(225, 238, 225);
         --bg-hover: lightgreen;
         --fg: rgb(0, 0, 0);
-        --font-size: 17px;
-        --font-size-l: 17px;
+        --font-size: 15px;
+        --font-size-l: 15px;
     }
     body{
         padding: 10px;
