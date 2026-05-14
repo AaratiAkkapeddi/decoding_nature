@@ -26,6 +26,7 @@ function draw() {
 
  if(width < 768){
   branch(height * 0.10);
+  text("HELLO", 0,0);
   }else{
   branch(height * 0.12);
   }
