@@ -115,6 +115,9 @@ ul a:hover {
         --font-size: 17px;
         --font-size-l: 19px;
     }
+    body{
+        padding: 10px;
+    }
     h2 {
         font-size: var(--font-size-l);
         font-weight: normal;
