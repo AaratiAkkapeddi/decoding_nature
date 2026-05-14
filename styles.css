@@ -113,7 +113,7 @@ ul a:hover {
         --bg-hover: lightgreen;
         --fg: rgb(0, 0, 0);
         --font-size: 17px;
-        --font-size-l: 19px;
+        --font-size-l: 17px;
     }
     body{
         padding: 10px;
@@ -147,7 +147,7 @@ ul a:hover {
 
     }
     #project-info p{
-        max-height: 90px;
+        max-height: 70px;
         padding: 5px;
         overflow-y: scroll;
         border:1px solid rgba(0, 0, 0, 0.529);
