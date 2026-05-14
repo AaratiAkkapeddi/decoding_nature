@@ -112,8 +112,8 @@ ul a:hover {
         --bg: rgb(225, 238, 225);
         --bg-hover: lightgreen;
         --fg: rgb(0, 0, 0);
-        --font-size: 3.5vw;
-        --font-size-l: 3.75vw;
+        --font-size: 20px;
+        --font-size-l: 24px;
     }
     h2 {
         font-size: var(--font-size-l);
