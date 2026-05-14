@@ -484,7 +484,7 @@ body {
   }
   body {
     padding-left: 0;
-    padding-top: 20vh
+   
   }
   canvas{
     position: relative;
@@ -527,6 +527,9 @@ body {
 
   .stat-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .hero-header{
+    margin-top: 20vh;
   }
 }
 
