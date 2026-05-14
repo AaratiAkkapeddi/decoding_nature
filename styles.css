@@ -112,8 +112,8 @@ ul a:hover {
         --bg: rgb(225, 238, 225);
         --bg-hover: lightgreen;
         --fg: rgb(0, 0, 0);
-        --font-size: 18px;
-        --font-size-l: 20px;
+        --font-size: 17px;
+        --font-size-l: 19px;
     }
     h2 {
         font-size: var(--font-size-l);
@@ -144,10 +144,10 @@ ul a:hover {
 
     }
     #project-info p{
-        max-height: 100px;
+        max-height: 90px;
         padding: 5px;
         overflow-y: scroll;
-        border:1px solid black;
+        border:1px solid rgba(0, 0, 0, 0.529);
     }
     canvas{
         bottom: 0;
