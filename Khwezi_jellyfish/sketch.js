@@ -13,8 +13,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
   for(let i = 0; i < 5; i++){
     myArray.push(new Jellies(random(width),random(height), 0, 0));
   }

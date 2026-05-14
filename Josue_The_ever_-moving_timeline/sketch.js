@@ -1,5 +1,9 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
 }
 
 function draw() {

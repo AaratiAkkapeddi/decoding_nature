@@ -37,8 +37,11 @@ let rainSize;
 let counter = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  translate(width / 2, height);
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }  translate(width / 2, height);
   angleMode(DEGREES);
   colorMode(HSB);
 

@@ -1,8 +1,11 @@
 let angle = 8; //creating a variable for the angle
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES); //need to rotate
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }  angleMode(DEGREES); //need to rotate
   
 }
 

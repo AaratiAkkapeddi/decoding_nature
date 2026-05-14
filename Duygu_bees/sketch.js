@@ -6,7 +6,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+    if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
   frameRate(10);
 
   // create 12 bees

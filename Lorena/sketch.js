@@ -14,8 +14,11 @@ function preload() {
 
 //created the canvas in full window mode by using window Width and Height to take up fullscreen. usually createdCanvas function size is at 400x400
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
   //I needed to create this equation to use my loaded fish gifs and created their speed and random swimming in the code but also coming back to the screen and not disappearing
   for (let i = 0; i < 2; i = i + 1) {
     // Create 5 fishes, each starting at the center with a random x and y speed (0–2)

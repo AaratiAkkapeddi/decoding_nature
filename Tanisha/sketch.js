@@ -11,8 +11,11 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }  
   for(let i = 0; i < 10; i= i + 1){
     
     let t = random(0,4);

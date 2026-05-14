@@ -24,8 +24,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES); // switch to degrees form radians
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }  angleMode(DEGREES); // switch to degrees form radians
   frameRate(7.5);
   
    for (let i = 0; i < 2; i = i + 1) {

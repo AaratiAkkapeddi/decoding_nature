@@ -1,6 +1,9 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES);
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }  angleMode(DEGREES);
 }
 
 function draw() {

@@ -2,7 +2,11 @@ let colors=
     
   ["tomato", "rebeccapurple", "papayawhip", "orange"];
   function setup() {
-  createCanvas(windowWidth, windowHeight);
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
   rectMode(CENTER); //so the rectangles are positioned by their center not the top left corner
   angleMode(DEGREES); //so our rotation is in degrees and not radians bc who knows radians off the top of their head
     

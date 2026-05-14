@@ -3,7 +3,11 @@ let direction = 0.5;
 let season = 0; // 0 = spring, 1 = summer, 2 = fall, 3 = winter
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+    if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
   angleMode(DEGREES);
   frameRate(18);
 }

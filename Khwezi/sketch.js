@@ -1,8 +1,12 @@
 // USE THE MOUSE TO ROTATE THE CIRCLES 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);//changes the window to fit the screen better
-  angleMode(DEGREES);// allows rotate to change the angle of the shapes 
+  if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
+    angleMode(DEGREES);// allows rotate to change the angle of the shapes 
 }
 
 function draw() {

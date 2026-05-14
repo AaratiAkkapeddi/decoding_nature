@@ -1,5 +1,10 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+
+    if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65, WEBGL);
+  }else{
+createCanvas(windowWidth, windowHeight, WEBGL);
+  }
 }
 
 function draw() {

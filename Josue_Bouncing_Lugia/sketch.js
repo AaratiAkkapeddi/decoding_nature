@@ -8,7 +8,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+    if(window.innerWidth < 768){
+createCanvas(windowWidth, windowHeight * 0.65);
+  }else{
+createCanvas(windowWidth, windowHeight);
+  }
   // Pick the color from the very top-left pixel (0, 0) of your image
   // This ensures the canvas matches the image's own background color
   bgColor = myImage.get(0, 0); 
