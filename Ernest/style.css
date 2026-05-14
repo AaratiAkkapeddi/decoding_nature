@@ -529,8 +529,12 @@ body {
     grid-template-columns: 1fr 1fr;
   }
   .hero-header{
-    margin-top: 20vh;
+    margin-top: 275px;
   }
+  #project-info{
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 560px) {
